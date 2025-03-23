@@ -23,11 +23,11 @@ public class LivroValidator {
     }
 
     private boolean existLivroCadastrado(Livro livro){
-        Optional<Livro> autorOptional = livroRepository.findByTituloOrIsbn(livro.getTitulo(), livro.getIsbn());
+        Optional<Livro> livroOptional = livroRepository.findByTituloOrIsbn(livro.getTitulo(), livro.getIsbn());
         if(livro.getId() == null){
-            return autorOptional.isPresent();
+            return livroOptional.isPresent();
         }
-        return autorOptional.isPresent() && !livro.getId().equals(autorOptional.get().getId());
+        return livroOptional.isPresent() && !livro.getId().equals(livroOptional.get().getId());
 
     }
 }
