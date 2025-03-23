@@ -17,12 +17,12 @@ public class LivroValidator {
 
 
     public void validar(Livro livro){
-        if(existAutorCadastrado(livro)){
+        if(existLivroCadastrado(livro)){
             throw  new RegistroDuplicadoException("Livro já cadastrado!");
         }
     }
 
-    private boolean existAutorCadastrado(Livro livro){
+    private boolean existLivroCadastrado(Livro livro){
         Optional<Livro> autorOptional = livroRepository.findByTituloOrIsbn(livro.getTitulo(), livro.getIsbn());
         if(livro.getId() == null){
             return autorOptional.isPresent();
