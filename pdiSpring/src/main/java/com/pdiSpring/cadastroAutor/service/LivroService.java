@@ -4,7 +4,7 @@ import ch.qos.logback.core.util.StringUtil;
 import com.pdiSpring.cadastroAutor.model.Autor;
 import com.pdiSpring.cadastroAutor.model.Livro;
 import com.pdiSpring.cadastroAutor.repository.LivroRepository;
-import com.pdiSpring.cadastroAutor.repository.LivroSpec;
+import com.pdiSpring.cadastroAutor.repository.specifications.LivroSpec;
 import com.pdiSpring.cadastroAutor.validator.LivroValidator;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.jpa.domain.Specification;

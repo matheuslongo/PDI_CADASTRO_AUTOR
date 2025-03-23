@@ -1,4 +1,4 @@
-package com.pdiSpring.cadastroAutor.repository;
+package com.pdiSpring.cadastroAutor.repository.specifications;
 
 import com.pdiSpring.cadastroAutor.model.Livro;
 import jakarta.persistence.criteria.Join;
